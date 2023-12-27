@@ -11,9 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {}
+keybindings = require('keybindings')
 
 require("vim-settings")
 require("lazy").setup("plugins")
-require("keybindings")
+keybindings.staticKeyMaps()
 vim.cmd.colorscheme "catppuccin"

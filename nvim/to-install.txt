@@ -1,3 +1,7 @@
-maybe harpoon
-undotree
-fugitive
+things to install:
+  maybe harpoon
+  undotree
+  fugitive
+things to look up:
+  lualine
+  neo-tree

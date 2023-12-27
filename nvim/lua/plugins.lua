@@ -1,10 +1,11 @@
-return { 
+return {
 
   "ThePrimeagen/vim-be-good",
-	"catppuccin/nvim",
+  "catppuccin/nvim",
   "nvim-lualine/lualine.nvim",
   {
-    "nvim-neo-tree/neo-tree.nvim", branch = "v3.x",
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
@@ -13,13 +14,15 @@ return {
     },
   },
   {
-    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    'nvim-telescope/telescope.nvim',
+    branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}, 
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   "nvim-itter/nvim-treesitter-context",
   {
-    "VonHeikemen/lsp-zero.nvim", branch = 'v3.x',
+    "VonHeikemen/lsp-zero.nvim",
+    branch = 'v3.x',
     dependencies = {
       -- mason for managing LSPs
       "williamboman/mason.nvim",
@@ -28,14 +31,18 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/nvim-cmp",
       "L3MON4D3/LuaSnip",
+      "rafamadriz/friendly-snippets",
+      "onsails/lspkind.nvim",
+      "lukas-reineke/lsp-format.nvim",
     },
   },
   {
-    "folke/noice.nvim", event = "VeryLazy",
+    "folke/noice.nvim",
+    event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
     }
   },
+  "jiangmiao/auto-pairs",
 }
- 
