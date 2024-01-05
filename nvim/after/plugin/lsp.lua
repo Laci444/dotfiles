@@ -26,6 +26,13 @@ require('mason-lspconfig').setup({
   },
 })
 
+require('null-ls').setup()
+
+require("mason-null-ls").setup({
+  automatic_installation = true,
+  handlers = {},
+})
+
 require('luasnip.loaders.from_vscode').lazy_load()
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
@@ -38,6 +45,7 @@ cmp.setup({
     { name = 'nvim_lua' },
   },
   mapping = cmp.mapping.preset.insert(
+  ---@diagnostic disable-next-line: undefined-global
     keybindings.cmpKeyMaps(cmp, cmp_action)
   ),
   preselect = 'item',

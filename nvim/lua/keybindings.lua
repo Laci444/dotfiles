@@ -11,6 +11,16 @@ function M.staticKeyMaps()
   local builtin = require("telescope.builtin")
   vim.keymap.set('n', '<C-p>', builtin.find_files, {})
   vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+
+  -- put-at-end
+  local pae = require('put_at_end')
+  vim.keymap.set("n", "<C-;>", pae.put_semicolon)
+  vim.keymap.set("n", "<C-.>", pae.put_period)
+  vim.keymap.set("n", "<C-,>", pae.put_comma)
+  vim.keymap.set("n", "<C-/>", pae.put_questionmark)
+  -- vim.keymap.set("n", "<C-A>", function() pae.put("STRING") end) -- will use this in the future
+  vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+  vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 end
 
 function M.lspOnAttachKeyMaps(opts)

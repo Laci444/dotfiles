@@ -30,10 +30,13 @@ return {
       "neovim/nvim-lspconfig",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/nvim-cmp",
+      'hrsh7th/cmp-path',
       "L3MON4D3/LuaSnip",
       "rafamadriz/friendly-snippets",
       "onsails/lspkind.nvim",
       "lukas-reineke/lsp-format.nvim",
+      { 'j-hui/fidget.nvim', opts = {} },
+      { 'folke/neodev.nvim', opts = {} },
     },
   },
   {
@@ -45,4 +48,18 @@ return {
     }
   },
   "jiangmiao/auto-pairs",
+  "rareitems/put_at_end.nvim",
+  {
+    "jay-babu/mason-null-ls.nvim",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "jose-elias-alvarez/null-ls.nvim",
+    },
+  },
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    opts = {},
+  },
+  { 'numToStr/Comment.nvim', opts = {} },
 }

@@ -2,6 +2,7 @@ things to install:
   maybe harpoon
   undotree
   fugitive
+  gitsigns
 things to look up:
   lualine
   neo-tree
