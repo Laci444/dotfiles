@@ -1,0 +1,19 @@
+[user]
+	name = Laszlo Szilagyi
+	email = 29151964+Laci444@users.noreply.github.com
+	username = Laci444
+[init]
+	defaultBranch = master
+[core]
+	editor = nvim
+[github]
+	user = Laci444
+[url "https://github.com/"]
+	insteadOf = gh:
+[web]
+	browser = brave
+
+[credential]
+	helper = store
+[color]
+	ui = auto

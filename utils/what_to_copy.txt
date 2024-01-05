@@ -1,0 +1,6 @@
+.gitconfig
+.zshrc
+.config/neofetch
+.config/nvim
+.config/kitty
+.config/spaceship
