@@ -74,15 +74,6 @@ plugins=(git spaceship-ember spaceship-vi-mode
  # zsh-autosuggestions
   fast-syntax-highlighting
   zsh-autocomplete
-# installed only on this system
-  argocd
-  aws
-  fzf
-  helm
-  istioctl
-  kubectl
-  minikube
-  zoxide
 )
 
 # User configuration
@@ -94,7 +85,7 @@ plugins=(git spaceship-ember spaceship-vi-mode
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+  export EDITOR='vim'
 else
   export EDITOR='nvim'
 fi
@@ -120,9 +111,6 @@ eval "$(thefuck --alias)"
 eval "$(yq completion zsh)"
 source $ZSH/oh-my-zsh.sh
 
-alias led_on='brightnessctl -d input6::scrolllock s 1 &> /dev/null'
-alias led_off='brightnessctl -d input6::scrolllock s 0 &> /dev/null'
-
 alias ls='eza --color=always --icons --all'
 alias l='eza --color=always --icons'
 alias ll='eza --long --color=always --icons --git --all --header --hyperlink'
@@ -130,5 +118,3 @@ alias tree='ls --tree'
 alias ltree='ll --tree'
 alias cat='bat'
 alias cd='z'
-
-led_on
