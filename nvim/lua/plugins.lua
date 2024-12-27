@@ -19,7 +19,7 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  "nvim-itter/nvim-treesitter-context",
+  "nvim-treesitter/nvim-treesitter-context",
   {
     "VonHeikemen/lsp-zero.nvim",
     branch = 'v3.x',
@@ -61,5 +61,19 @@ return {
     main = 'ibl',
     opts = {},
   },
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',           opts = {} },
+  'towolf/vim-helm',
+  'nvim-java/nvim-java',
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
+  {
+    'mrcjkb/rustaceanvim',
+    version = '^5', -- Recommended
+    lazy = false,   -- This plugin is already lazy
+  },
+  'mfussenegger/nvim-dap'
 }

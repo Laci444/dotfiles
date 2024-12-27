@@ -71,9 +71,18 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git spaceship-ember spaceship-vi-mode 
-  zsh-autosuggestions
+ # zsh-autosuggestions
   fast-syntax-highlighting
   zsh-autocomplete
+# installed only on this system
+  argocd
+  aws
+  fzf
+  helm
+  istioctl
+  kubectl
+  minikube
+  zoxide
 )
 
 # User configuration
@@ -85,7 +94,7 @@ plugins=(git spaceship-ember spaceship-vi-mode
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
   export EDITOR='nvim'
 fi
@@ -107,8 +116,8 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
+eval "$(yq completion zsh)"
 source $ZSH/oh-my-zsh.sh
 
 alias led_on='brightnessctl -d input6::scrolllock s 1 &> /dev/null'
